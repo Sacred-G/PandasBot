@@ -65,13 +65,13 @@ def main():
                 ax.bar(data[x_column], data[y_column])
             elif chart_type == "Scatter Plot":
                 ax.scatter(data[x_column], data[y_column])
-            ax.set_xlabel(x_column)
-            ax.set_ylabel(y_column)
+                ax.set_xlabel(x_column)
+                ax.set_ylabel(y_column)
             for label in ax.get_xticklabels():
                 label.set_rotation(45)
                 label.set_horizontalalignment('right')
-            ax.tick_params(axis='x', labelsize=8)
-            ax.tick_params(axis='y', labelsize=8)
+                ax.tick_params(axis='x', labelsize=8)
+                ax.tick_params(axis='y', labelsize=8)
             st.pyplot(fig)
 
         llm = OpenAI(temperature=TEMP, openai_api_key=st.secrets["openai_api_key"])
